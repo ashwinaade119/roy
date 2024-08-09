@@ -8,6 +8,6 @@ resource "aws_instance" "demo" {
   key_name = "b37-1"
 
   tags = {
-    name = 
+    name = "instance_name"
   }
 }
