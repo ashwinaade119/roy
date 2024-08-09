@@ -7,7 +7,7 @@ instance_type = "t2.micro"
 key_name = "b37-1"
 
 tags = {
-    Enviorment = "staging"
+    Enviorment = "staging the process"
     owner = "ashwin"    
   }
 
