@@ -1,5 +1,3 @@
-tf
-401 B
 terraform {
   required_providers {
     aws = {
