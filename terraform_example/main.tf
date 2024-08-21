@@ -13,7 +13,7 @@ provider "aws" {
 }
 
 ##### Try to create one ubuntu server
-resource "aws_instance" "pro" {
+resource "aws_instance" "production" {
   ami                     = var.ami
   instance_type           = var.instance_type
   key_name                = var.key_name
