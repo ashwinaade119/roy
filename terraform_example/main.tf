@@ -1,3 +1,5 @@
+tf
+401 B
 terraform {
   required_providers {
     aws = {
@@ -6,18 +8,14 @@ terraform {
     }
   }
 }
-
 provider "aws" {
   # Configuration options
   region = var.region
 }
-#### Try to create one ubuntu server
+##### Try to create one ubuntu server
 resource "aws_instance" "this" {
   ami                     = var.ami
   instance_type           = var.instance_type
   key_name                = var.key_name
-
-  tags                    = var.tags
-
+  tags = var.tags
 }
-
