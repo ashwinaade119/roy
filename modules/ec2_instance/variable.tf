@@ -18,7 +18,7 @@ variable "vpc_security_group_ids" {
   type        = list(string)
 }
 
-variable "user_data_file" ""{
+variable "user_data_file" "this"{
   description = "The path to the user data script file"
   type        = string
 }
