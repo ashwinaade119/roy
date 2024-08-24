@@ -54,7 +54,7 @@ module "my_security_group" {
 
 module "my_ec2_instance" {
   source          = "./modules/ec2_instance" # Path to the EC2 instance module directory
-  ami             = "ami-0ad21ae1d0696ad58" # Replace with your desired AMI
+  ami             = "ami-02b49a24cfb95941c" # Replace with your desired AMI
   instance_type   = "t2.medium"
   key_name        = module.my_key_pair.key_name
   vpc_security_group_ids = [module.my_security_group.security_group_id]
