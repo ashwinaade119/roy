@@ -18,10 +18,6 @@ variable "vpc_security_group_ids" {
   type        = list(string)
 }
 
-variable "user_data_file" {
-  description = "The path to the user data script file"
-  type        = string
-}
 
 variable "tags" {
   description = "A map of tags to assign to the resource"
