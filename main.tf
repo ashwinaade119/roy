@@ -4,7 +4,7 @@ provider "aws" {
 
 module "my_key_pair" {
   source     = "./modules/key_pair" # Path to the module directory
-  key_name   = "supreme_key"
+  key_name   = "b37-1"
   public_key = file("${path.module}/./modules/key_pair/hybrid.pub") # Ensure this file exists and contains your public key
 
   tags = {
