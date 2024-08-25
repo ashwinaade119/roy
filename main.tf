@@ -17,7 +17,7 @@ module "my_security_group" {
   source      = "./modules/security_group" # Path to the module directory
   name        = "my-security-group"
   description = "Security group for my application"
-  vpc_id      = "vpc-0efd68799627244ca"  # Replace with your VPC ID
+  vpc_id      = "vpc-073dcd5895b1fbf1d"  # Replace with your VPC ID
 
   ingress_rules = [
     {
