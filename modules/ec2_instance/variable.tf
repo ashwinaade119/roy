@@ -15,7 +15,7 @@ variable "key_name" {
 
 variable "vpc_security_group_ids" {
   description = "A list of VPC security group IDs to associate with the instance"
-  type        = list(string)
+  type        = var
   vpc_id      = "vpc-073dcd5895b1fbf1d"
 }
 
