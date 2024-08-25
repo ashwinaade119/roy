@@ -14,7 +14,7 @@ module "my_key_pair" {
 }
 
 module "my_security_group" {
-  source      = "./modules/security_group" # Path to the module directory
+  source      = "/./modules/security_group" # Path to the module directory
   name        = "my-security-group"
   description = "Security group for my application"
   vpc_id      = "vpc-073dcd5895b1fbf1d"  # Replace with your VPC ID
