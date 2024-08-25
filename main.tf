@@ -13,6 +13,44 @@ module "my_key_pair" {
   }
 }
 
+module "my_security_group" {
+  source      = "./modules/security_group" # Path to the module directory
+  name        = "my-security-group"
+  description = "Security group for my application"
+  vpc_id      = "vpc-073dcd5895b1fbf1d"  # Replace with your VPC ID
+
+  ingress_rules = [
+    {
+      from_port   = 22
+      to_port     = 22
+      protocol    = "tcp"
+      cidr_blocks = ["0.0.0.0/0"]
+      description = "Allow SSH"
+    },
+    {
+      from_port   = 80
+      to_port     = 80
+      protocol    = "tcp"
+      cidr_blocks = ["0.0.0.0/0"]
+      description = "Allow HTTP"
+    }
+  ]
+
+  egress_rules = [
+    {
+      from_port   = 0
+      to_port     = 0
+      protocol    = "-1"
+      cidr_blocks = ["0.0.0.0/0"]
+      description = "Allow all outbound traffic"
+    }
+  ]
+
+  tags = {
+    Environment = "production"
+    Owner       = "jarvis"
+  }
+}
 
 module "my_ec2_instance" {
   source          = "./modules/ec2_instance" # Path to the EC2 instance module directory
