@@ -11,7 +11,7 @@ terraform {
  }
 
  resource "aws_s3_bucket" "terraform-state" {
-   bucket = "terraform-state-dcube-220"
+   bucket = "terraform-state-dcube-2123"
  }
 
  resource "aws_s3_bucket_versioning" "terraform-state" {
