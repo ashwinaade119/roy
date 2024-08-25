@@ -53,7 +53,7 @@ module "my_security_group" {
 }
 
 module "my_ec2_instance" {
-  source          = "./modules/ec2_instance" # Path to the EC2 instance module directory
+  source          = "/./modules/ec2_instance" # Path to the EC2 instance module directory
   ami             = "ami-02b49a24cfb95941c" # Replace with your desired AMI
   instance_type   = "t2.medium"
   key_name        = module.my_key_pair.key_name
