@@ -27,5 +27,6 @@ variable "tags" {
 
 variable "user_data_file" {
   description = "The path to the user data script file"
+  
   type        = string
 }
