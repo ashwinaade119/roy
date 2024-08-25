@@ -7,7 +7,7 @@ terraform {
  }
 
  provider "aws" {
-   region = "south"
+   region = "ap-south-1"
  }
 
  resource "aws_s3_bucket" "terraform-state" {
