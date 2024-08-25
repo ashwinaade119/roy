@@ -1,4 +1,4 @@
- Create a S3 Bucket for state locking
+
 
  terraform {
    required_providers {
